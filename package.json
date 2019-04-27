@@ -1,0 +1,35 @@
+{
+    "name": "iview-snippet",
+    "displayName": "iview-snippet",
+    "description": "Visual Studio Code extension for iview snippets",
+    "version": "0.0.1",
+    "publisher": "Teemwu",
+    "icon": "https://raw.githubusercontent.com/Teemwu/images/master/logo.png",
+    "engines": {
+        "vscode": "^1.33.0"
+    },
+    "galleryBanner": {
+        "color": "#6cfff9",
+        "theme": "dark"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "vue",
+                "path": "./snippets/iview.json"
+            },
+            {
+                "language": "vue-html",
+                "path": "./snippets/iview.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/iview.json"
+            }
+        ]
+    },
+    "license": "MIT"
+}

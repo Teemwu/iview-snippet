@@ -1,0 +1,192 @@
+{
+  "Base: Button": {
+    "prefix": "ibutton",
+    "body": "<Button type=\"${1|primary,dashed,text,info,success,warning,error|}\">$2</Button>",
+    "description": "iview Button"
+  },
+  "Base: Icon": {
+    "prefix": "iicon",
+    "body": "<Icon type=\"$1\"/>",
+    "description": "iview Icon"
+  },
+  "Layout: Row": {
+    "prefix": "irow",
+    "body": "<Row>$1</Row>",
+    "description": "iview Row"
+  },
+  "Layout: Col": {
+    "prefix": "icol",
+    "body": "<Col span=\"$1\">$2</Col>",
+    "description": "iview Col"
+  },
+  "Layout: Layout": {
+    "prefix": "ilayout",
+    "body": "<Layout>$1</Layout>",
+    "description": "iview Layout"
+  },
+  "Layout: Header": {
+    "prefix": "iheader",
+    "body": "<Header>$1</Header>",
+    "description": "iview Header"
+  },
+  "Layout: Content": {
+    "prefix": "icontent",
+    "body": "<Content>$1</Content>",
+    "description": "iview Content"
+  },
+  "Layout: Footer": {
+    "prefix": "ifooter",
+    "body": "<Footer>$1</Footer>",
+    "description": "iview Footer"
+  },
+  "Layout: Sider": {
+    "prefix": "isider",
+    "body": "<Sider>$1</Sider>",
+    "description": "iview Sider"
+  },
+  "Layout: Card": {
+    "prefix": "icard",
+    "body": "<Card>$1</Card>",
+    "description": "iview Card"
+  },
+  "Layout: Collapse": {
+    "prefix": "icollapse",
+    "body": [
+      "<Collapse v-model=\"${1:model}\">",
+      "\t<Panel name=\"1\">",
+      "\t\t$2",
+      "\t\t<div slot=\"content\">$3</div>",
+      "\t</Panel>",
+      "\t<Panel name=\"2\">",
+      "\t\t$4",
+      "\t\t<div slot=\"content\">$5</div>",
+      "\t</Panel>",
+      "</Collapse>"
+    ],
+    "description": "iview Collapse"
+  },
+  "Layout: Panel": {
+    "prefix": "ipanel",
+    "body": [
+      "<Panel name=\"$1\">",
+      "\t$2",
+      "\t<div slot=\"content\">$3</p>",
+      "</Panel>"
+    ],
+    "description": "iview Panel"
+  },
+  "Layout: Split": {
+    "prefix": "isplitlar",
+    "body": [
+      "<Split v-model=\"${1:model}\" mode=\"${2|horizontal,vertical|}\">",
+      "\t<div slot=\"${3|left,top|}\">",
+      "\t\t$4",
+      "\t</div>",
+      "\t<div slot=\"${5|right,bottom|}\">",
+      "\t\t$6",
+      "\t</div>",
+      "</Split>"
+    ],
+    "description": "iview Split"
+  },
+  "Layout: Divider": {
+    "prefix": "idivider",
+    "body": "<Divider type=\"${2|horizontal,vertical|}\" dashed=\"${3|false,true|}\"/>",
+    "description": "iview Divider"
+  },
+  "Layout: Divider with text": {
+    "prefix": "idivider",
+    "body": "<Divider type=\"${2|horizontal,vertical|}\" dashed=\"${3|false,true|}\" orientation=\"${4|center,left,right|}\">$5</Divider>",
+    "description": "iview Divider with text"
+  },
+  "Layout: CellGroup": {
+    "prefix": "icellgroup",
+    "body": [
+      "<CellGroup>",
+      "\t<Cell title=\"$1\" label=\"$2\" extra=\"$3\" />",
+      "</CellGroup>"
+    ],
+    "description": "iview CellGroup"
+  },
+  "Layout: Cell": {
+    "prefix": "icell",
+    "body": "<Cell title=\"$1\" label=\"$2\" extra=\"$3\" />",
+    "description": "iview Cell"
+  },
+  "Layout: Cell with slot": {
+    "prefix": "icellslot",
+    "body": [
+      "<Cell>",
+      "\t<div slot=\"${3|default,icon,label,extra,arrow|}\">$4</div>",
+      "</Cell>"
+    ],
+    "description": "iview Cell with slot"
+  },
+  "Navigation: Menu": {
+    "prefix": "imenu",
+    "body": [
+      "<Menu mode=\"${1|vertical,horizontal|}\" theme=\"${2|light,dark,primary|}\" active-name=\"1\">",
+      "\t<MenuItem name=\"1\">",
+      "\t\t<Icon type=\"ios-paper\" />",
+      "\t\t内容管理",
+      "\t</MenuItem>",
+      "\t<MenuItem name=\"2\">",
+      "\t\t<Icon type=\"ios-people\" />",
+      "\t\t用户管理",
+      "\t</MenuItem>",
+      "\t<Submenu name=\"3\">",
+      "\t\t<template slot=\"title\">",
+      "\t\t\t<Icon type=\"ios-stats\" />",
+      "\t\t\t统计分析",
+      "\t\t</template>",
+      "\t\t<MenuGroup title=\"使用\">",
+      "\t\t\t<MenuItem name=\"3-1\">新增和启动</MenuItem>",
+      "\t\t\t<MenuItem name=\"3-2\">活跃分析</MenuItem>",
+      "\t\t\t<MenuItem name=\"3-3\">时段分析</MenuItem>",
+      "\t\t</MenuGroup>",
+      "\t\t<MenuGroup title=\"留存\">",
+      "\t\t\t<MenuItem name=\"3-4\">用户留存</MenuItem>",
+      "\t\t\t<MenuItem name=\"3-5\">流失用户</MenuItem>",
+      "\t\t</MenuGroup>",
+      "\t</Submenu>",
+      "\t<MenuItem name=\"4\">",
+      "\t\t<Icon type=\"ios-construct\" />",
+      "\t\t综合设置",
+      "\t</MenuItem>",
+      "</Menu>"
+    ],
+    "description": "iview Menu"
+  },
+  "Navigation: Submenu": {
+    "prefix": "isubmenu",
+    "body": [
+      "<Submenu name=\"3\">",
+      "      <template slot=\"title\">",
+      "          <Icon type=\"ios-stats\" />",
+      "          统计分析",
+      "      </template>",
+      "      <MenuGroup title=\"使用\">",
+      "          <MenuItem name=\"3-1\">新增和启动</MenuItem>",
+      "          <MenuItem name=\"3-2\">活跃分析</MenuItem>",
+      "          <MenuItem name=\"3-3\">时段分析</MenuItem>",
+      "      </MenuGroup>",
+      "      <MenuGroup title=\"留存\">",
+      "          <MenuItem name=\"3-4\">用户留存</MenuItem>",
+      "          <MenuItem name=\"3-5\">流失用户</MenuItem>",
+      "      </MenuGroup>",
+      "  </Submenu>"
+    ],
+    "description": "iview Submenu"
+  },
+  "Navigation: MenuGroup": {
+    "prefix": "imenugroup",
+    "body": [
+      "<MenuGroup title=\"使用\">",
+      "    <MenuItem name=\"3-1\">新增和启动</MenuItem>",
+      "    <MenuItem name=\"3-2\">活跃分析</MenuItem>",
+      "    <MenuItem name=\"3-3\">时段分析</MenuItem>",
+      "</MenuGroup>"
+    ],
+    "description": "iview MenuGroup"
+  }
+}
