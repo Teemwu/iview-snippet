@@ -15,20 +15,12 @@ function rawLines(str) {
 }
 
 /**
- * 获取标签名
- * @param {String} str HTML 字符串
- */
-function leftTag(str) {
-  return str.match(/\w+/)[0]
-}
-
-/**
  * 初始 snippet 项参数
  * @param {String} str HTML 字符串
  */
 function initSnippetOption(str) {
   return {
-    prefix: `${pre}${leftTag(str).toLowerCase()}`,
+    prefix: `${pre}${str.match(/\w+/)[0].toLowerCase()}`,
     scope: scope,
     body: rawLines(str)
   }

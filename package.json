@@ -8,6 +8,9 @@
     "engines": {
         "vscode": "^1.33.0"
     },
+    "scripts": {
+        "build": "node make_snippets.js"
+    },
     "galleryBanner": {
         "color": "#6cfff9",
         "theme": "dark"

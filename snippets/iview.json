@@ -1,4 +1,113 @@
 {
+  "button": {
+    "prefix": "ibutton",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Button>$1</Button>"
+    ],
+    "description": "iview button"
+  },
+  "card": {
+    "prefix": "icard",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Card>$1</Card>"
+    ],
+    "description": "iview card"
+  },
+  "cell": {
+    "prefix": "icell",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Cell title=\"$1\" />"
+    ],
+    "description": "iview cell"
+  },
+  "cellgroup": {
+    "prefix": "icellgroup",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<CellGroup>$1</CellGroup>"
+    ],
+    "description": "iview cellgroup"
+  },
+  "col": {
+    "prefix": "icol",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Col span=\"$1\"></Col>"
+    ],
+    "description": "iview col"
+  },
+  "collapse": {
+    "prefix": "icollapse",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Collapse v-model=\"$1\">",
+      "  <Panel name=\"$2\">",
+      "    $3",
+      "    <div slot=\"content\">$4</div>",
+      "  </Panel>",
+      "</Collapse>"
+    ],
+    "description": "iview collapse"
+  },
+  "content": {
+    "prefix": "icontent",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Content>$1</Content>"
+    ],
+    "description": "iview content"
+  },
+  "divider": {
+    "prefix": "idivider",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Divider />"
+    ],
+    "description": "iview divider"
+  },
+  "divider.text": {
+    "prefix": "idivider",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Divider>$1</Divider>"
+    ],
+    "description": "iview divider.text"
+  },
+  "footer": {
+    "prefix": "ifooter",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Footer>$1</Footer>"
+    ],
+    "description": "iview footer"
+  },
+  "header": {
+    "prefix": "iheader",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Header>$1</Header>"
+    ],
+    "description": "iview header"
+  },
+  "icon": {
+    "prefix": "iicon",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Icon type=\"$1\" />"
+    ],
+    "description": "iview icon"
+  },
+  "layout": {
+    "prefix": "ilayout",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Layout>$1</Layout>"
+    ],
+    "description": "iview layout"
+  },
   "menu": {
     "prefix": "imenu",
     "scope": "vue, html, vue-html",
@@ -44,5 +153,62 @@
       "</MenuGroup>"
     ],
     "description": "iview menugroup"
+  },
+  "panel": {
+    "prefix": "ipanel",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Panel name=\"$1\">",
+      "  $2",
+      "  <div slot=\"content\">$3</div>",
+      "</Panel>"
+    ],
+    "description": "iview panel"
+  },
+  "row": {
+    "prefix": "irow",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Row>$1</Row>"
+    ],
+    "description": "iview row"
+  },
+  "slider": {
+    "prefix": "isider",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Sider hide-trigger>$1</Sider>"
+    ],
+    "description": "iview slider"
+  },
+  "split.left.right": {
+    "prefix": "isplit",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Split v-model=\"$1\">",
+      "  <div slot=\"left\">",
+      "    $2",
+      "  </div>",
+      "  <div slot=\"right\">",
+      "    $3",
+      "  </div>",
+      "</Split>"
+    ],
+    "description": "iview split.left.right"
+  },
+  "split.top.bottom": {
+    "prefix": "isplit",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Split v-model=\"$1\" mode=\"vertical\">",
+      "  <div slot=\"top\">",
+      "    $2",
+      "  </div>",
+      "  <div slot=\"bottom\">",
+      "    $3",
+      "  </div>",
+      "</Split>"
+    ],
+    "description": "iview split.top.bottom"
   }
 }
