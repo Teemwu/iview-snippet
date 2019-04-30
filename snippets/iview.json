@@ -23,6 +23,16 @@
     ],
     "description": "iview cell"
   },
+  "cell.slot": {
+    "prefix": "icell",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Cell title=\"$1\">",
+      "  <div slot=\"${1|extra,icon,label,arrow|}\">$2</div>",
+      "</Cell>"
+    ],
+    "description": "iview cell.slot"
+  },
   "cellgroup": {
     "prefix": "icellgroup",
     "scope": "vue, html, vue-html",
@@ -112,34 +122,18 @@
     "prefix": "imenu",
     "scope": "vue, html, vue-html",
     "body": [
-      "<Menu mode=\"horizontal\" :theme=\"theme1\" active-name=\"1\">",
-      "  <MenuItem name=\"1\">",
-      "      <Icon type=\"ios-paper\" />",
-      "      内容管理",
+      "<Menu mode=\"${1|horizontal,vertical|}\" theme=\"${2|dark,light|}\" active-name=\"$3\">",
+      "  <MenuItem name=\"$4\">",
+      "      $5",
       "  </MenuItem>",
-      "  <MenuItem name=\"2\">",
-      "      <Icon type=\"ios-people\" />",
-      "      用户管理",
-      "  </MenuItem>",
-      "  <Submenu name=\"3\">",
+      "  <Submenu name=\"$6\">",
       "      <template slot=\"title\">",
-      "          <Icon type=\"ios-stats\" />",
-      "          统计分析",
+      "          $7",
       "      </template>",
-      "      <MenuGroup title=\"使用\">",
-      "          <MenuItem name=\"3-1\">新增和启动</MenuItem>",
-      "          <MenuItem name=\"3-2\">活跃分析</MenuItem>",
-      "          <MenuItem name=\"3-3\">时段分析</MenuItem>",
-      "      </MenuGroup>",
-      "      <MenuGroup title=\"留存\">",
-      "          <MenuItem name=\"3-4\">用户留存</MenuItem>",
-      "          <MenuItem name=\"3-5\">流失用户</MenuItem>",
+      "      <MenuGroup title=\"$8\">",
+      "          <MenuItem name=\"$9\">$10</MenuItem>",
       "      </MenuGroup>",
       "  </Submenu>",
-      "  <MenuItem name=\"4\">",
-      "      <Icon type=\"ios-construct\" />",
-      "      综合设置",
-      "  </MenuItem>",
       "</Menu>"
     ],
     "description": "iview menu"
@@ -153,6 +147,14 @@
       "</MenuGroup>"
     ],
     "description": "iview menugroup"
+  },
+  "menuitem": {
+    "prefix": "imenuitem",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<MenuItem name=\"$1\">$2</MenuItem>"
+    ],
+    "description": "iview menuitem"
   },
   "panel": {
     "prefix": "ipanel",
@@ -210,5 +212,34 @@
       "</Split>"
     ],
     "description": "iview split.top.bottom"
+  },
+  "submenu": {
+    "prefix": "isubmenu",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Submenu name=\"$1\">",
+      "  <template slot=\"title\">",
+      "    $2",
+      "  </template>",
+      "  <MenuItem name=\"$3\">$4</MenuItem>",
+      "  <Submenu name=\"$5\">",
+      "    <template slot=\"title\">$6</template>",
+      "    <MenuItem name=\"$7\">$8</MenuItem>",
+      "  </Submenu>",
+      "</Submenu>"
+    ],
+    "description": "iview submenu"
+  },
+  "tabs": {
+    "prefix": "itabs",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Tabs>",
+      "  <TabPane label=\"${1:标签一}\">$2</TabPane>",
+      "  <TabPane label=\"${3:标签二}\" disabled>$4</TabPane>",
+      "  <TabPane label=\"${5:标签三}\">$6</TabPane>",
+      "</Tabs>"
+    ],
+    "description": "iview tabs"
   }
 }
