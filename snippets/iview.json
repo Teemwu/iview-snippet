@@ -1,4 +1,53 @@
 {
+  "anchor": {
+    "prefix": "ianchor",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Anchor show-ink>",
+      "  <AnchorLink href=\"#$1\" title=\"$2\" />",
+      "</Anchor>"
+    ],
+    "description": "iview anchor"
+  },
+  "anchorlink": {
+    "prefix": "ianchorlink",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<AnchorLink href=\"#$1\" title=\"$2\">",
+      "    <AnchorLink href=\"#$3\" title=\"$4\" />",
+      "</AnchorLink>"
+    ],
+    "description": "iview anchorlink"
+  },
+  "badge": {
+    "prefix": "ibadge",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Badge :count=\"$1\">",
+      "  $2",
+      "</Badge>"
+    ],
+    "description": "iview badge"
+  },
+  "breadcrumb": {
+    "prefix": "ibreadcrumb",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Breadcrumb>",
+      "  <BreadcrumbItem to=\"$1\">$2</BreadcrumbItem>",
+      "  <BreadcrumbItem to=\"$2\">$3</BreadcrumbItem>",
+      "</Breadcrumb>"
+    ],
+    "description": "iview breadcrumb"
+  },
+  "breadcrumbitem": {
+    "prefix": "ibreadcrumbitem",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<BreadcrumbItem to=\"$1\">$2</BreadcrumbItem>"
+    ],
+    "description": "iview breadcrumbitem"
+  },
   "button": {
     "prefix": "ibutton",
     "scope": "vue, html, vue-html",
@@ -40,6 +89,25 @@
       "<CellGroup>$1</CellGroup>"
     ],
     "description": "iview cellgroup"
+  },
+  "checkbox": {
+    "prefix": "icheckbox",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Checkbox v-model=\"$1\">$2</Checkbox>"
+    ],
+    "description": "iview checkbox"
+  },
+  "checkboxgroup": {
+    "prefix": "icheckboxgroup",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<CheckboxGroup v-model=\"$1\">",
+      "  <Checkbox label=\"$2\" disabled></Checkbox>",
+      "  <Checkbox label=\"$3\"></Checkbox>",
+      "</CheckboxGroup>"
+    ],
+    "description": "iview checkboxgroup"
   },
   "col": {
     "prefix": "icol",
@@ -86,6 +154,32 @@
     ],
     "description": "iview divider.text"
   },
+  "dropdown": {
+    "prefix": "idropdown",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Dropdown>",
+      "  <a href=\"javascript:void(0)\">",
+      "    $1",
+      "    <Icon type=\"ios-arrow-down\"></Icon>",
+      "  </a>",
+      "  <DropdownMenu slot=\"list\">",
+      "    <DropdownItem>$2</DropdownItem>",
+      "    <DropdownItem disabled>$3</DropdownItem>",
+      "    <DropdownItem divided>$4</DropdownItem>",
+      "  </DropdownMenu>",
+      "</Dropdown>"
+    ],
+    "description": "iview dropdown"
+  },
+  "dropdownitem": {
+    "prefix": "idropdownitem",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<DropdownItem>$1</DropdownItem>"
+    ],
+    "description": "iview dropdownitem"
+  },
   "footer": {
     "prefix": "ifooter",
     "scope": "vue, html, vue-html",
@@ -109,6 +203,14 @@
       "<Icon type=\"$1\" />"
     ],
     "description": "iview icon"
+  },
+  "input": {
+    "prefix": "iinput",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Input v-model=\"$1\" placeholder=\"$2\"/>"
+    ],
+    "description": "iview input"
   },
   "layout": {
     "prefix": "ilayout",
@@ -156,6 +258,14 @@
     ],
     "description": "iview menuitem"
   },
+  "page": {
+    "prefix": "ipage",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Page :total=\"$1\" size=\"${2|default,small|}\" show-elevator show-sizer />"
+    ],
+    "description": "iview page"
+  },
   "panel": {
     "prefix": "ipanel",
     "scope": "vue, html, vue-html",
@@ -167,6 +277,29 @@
     ],
     "description": "iview panel"
   },
+  "radio": {
+    "prefix": "iradio",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Radio v-model=\"$1\">$2</Radio>"
+    ],
+    "description": "iview radio"
+  },
+  "radiogroup": {
+    "prefix": "iradiogroup",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<RadioGroup v-model=\"$1\" vertical=\"${6:false}\">",
+      "  <Radio label=\"$2\">",
+      "    $3",
+      "  </Radio>",
+      "  <Radio label=\"$4\">",
+      "    $5",
+      "  </Radio>",
+      "</RadioGroup>"
+    ],
+    "description": "iview radiogroup"
+  },
   "row": {
     "prefix": "irow",
     "scope": "vue, html, vue-html",
@@ -174,6 +307,16 @@
       "<Row>$1</Row>"
     ],
     "description": "iview row"
+  },
+  "select": {
+    "prefix": "iselect",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Select v-model=\"$1\">",
+      "  <Option v-for=\"(item,index) in $2\" :value=\"$2.value\" :key=\"index\">{{ $2.label }}</Option>",
+      "</Select>"
+    ],
+    "description": "iview select"
   },
   "slider": {
     "prefix": "isider",
@@ -213,6 +356,25 @@
     ],
     "description": "iview split.top.bottom"
   },
+  "step": {
+    "prefix": "istep",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Step title=\"$1\" content=\"$2\"></Step>"
+    ],
+    "description": "iview step"
+  },
+  "steps": {
+    "prefix": "isteps",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Steps :current=\"$1\" direction=\"${2|horizontal,vertical|}\">",
+      "  <Step title=\"$3\" content=\"$4\"></Step>",
+      "  <Step title=\"$5\" content=\"$6\"></Step>",
+      "</Steps>"
+    ],
+    "description": "iview steps"
+  },
   "submenu": {
     "prefix": "isubmenu",
     "scope": "vue, html, vue-html",
@@ -230,14 +392,38 @@
     ],
     "description": "iview submenu"
   },
+  "switch": {
+    "prefix": "iswitch",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Switch v-model=\"$1\" @on-change=\"$2\" />"
+    ],
+    "description": "iview switch"
+  },
+  "table": {
+    "prefix": "itable",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<Table :columns=\"$1 :data=\"$2\"></Table>"
+    ],
+    "description": "iview table"
+  },
+  "tabpane": {
+    "prefix": "itabpane",
+    "scope": "vue, html, vue-html",
+    "body": [
+      "<TabPane label=\"$1\" name=\"$2\">$3</TabPane>"
+    ],
+    "description": "iview tabpane"
+  },
   "tabs": {
     "prefix": "itabs",
     "scope": "vue, html, vue-html",
     "body": [
-      "<Tabs>",
-      "  <TabPane label=\"${1:标签一}\">$2</TabPane>",
-      "  <TabPane label=\"${3:标签二}\" disabled>$4</TabPane>",
-      "  <TabPane label=\"${5:标签三}\">$6</TabPane>",
+      "<Tabs type=\"${1|card,line|}\">",
+      "  <TabPane label=\"${2:标签一}\">$3</TabPane>",
+      "  <TabPane label=\"${4:标签二}\" disabled>$5</TabPane>",
+      "  <TabPane label=\"${6:标签三}\">$7</TabPane>",
       "</Tabs>"
     ],
     "description": "iview tabs"
